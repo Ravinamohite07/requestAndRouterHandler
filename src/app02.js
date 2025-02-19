@@ -19,3 +19,6 @@ app.use("/hello",(req,res) =>{
 app.listen(3000,() =>{
     console.log("Server is successfully listen on port 3000");
 });
+
+// "/test" => hello from the test..!
+//"/hello" => "hello!!"

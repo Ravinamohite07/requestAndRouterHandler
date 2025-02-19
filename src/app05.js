@@ -2,13 +2,16 @@ const express = require("express");
 
 const app = express();
 
-
-app.use("/test",(req,res) => {
-    res.send("hello from the test..!");
+app.use("/hello/2",(req,res) =>{
+    res.send("hello...from hello/2!!");
 });
 
 app.use("/hello",(req,res) =>{
-    res.send("hello!!");
+    res.send("hello...!!");
+});
+
+app.use("/test",(req,res) => {
+    res.send("hello from the test..!");
 });
 
 app.use("/",(req,res) =>{
@@ -21,6 +24,6 @@ app.listen(3000,() =>{
     console.log("Server is successfully listen on port 3000");
 });
 
-//"/test" => hello from the test..!
-//"/hello" => hello!!
-//"/" => hello from the server...!
+
+//http://localhost:3000/hello =>  hello!!
+//http://localhost:3000/hello/2 => hello...from hello/2!!
